@@ -1,28 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <section id="AreaCirculo">
-        <div class="titulo">Area do circulo</div>
-        <input id="RaioDoCirculo" type="text" placeholder="Digite o raio do círculo">
-        <button type="button" onclick="AreaCirculo()">Click</button>
-        <p id="RespostaRaio">Raio</p>
-        <div id="CirculoVisual" class="circulo">
-            
-        </div>
-    </section>
-    <section id="F-C">
-        <div class="titulo">Fahrenheit para Celcius</div>
-        <input id="Fahrenheit" type="text" onkeyup="FahrenheitToCelcius()" placeholder="Digite o valor de F">
-        <p id="Temperatura">Temperatura</p>
-        <div id="Termometro" class="termometro"></div>
-    </section>
-    <script src="js/script.js"></script>
-</body>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <section id="AreaCirculo">
+            <div class="titulo">Area do circulo</div>
+            <input id="RaioDoCirculo" type="text" placeholder="Digite o raio do círculo">
+            <button type="button" onclick="AreaCirculo()">Click</button>
+            <p id="RespostaRaio">Raio</p>
+            <div id="CirculoVisual" class="circulo"></div>
+        </section>
+
+        <section id="F-C">
+            <div class="titulo">Fahrenheit para Celcius</div>
+            <input id="Fahrenheit" type="text" onkeyup="FahrenheitToCelcius()" placeholder="Digite o valor de F">
+            <p id="TemperaturaF">Temperatura</p>
+            <div id="TermometroF" class="termometroF"></div>
+        </section>
+
+        <section id="C-F">
+            <div class="titulo">Celcius para Fahrenheit</div>
+            <input id="Celcius" type="text" onkeyup="CelciusToFahrenheit()" placeholder="Digite o valor de C">
+            <p id="TemperaturaC">Temperatura</p>
+            <div id="TermometroC" class="termometroC"></div>
+        </section>
+
+        <section id="Lampadas-Area">
+            <div class="titulo">Quantas lâmpadas serão necessárias</div>
+            <form action="">
+                <input id="PotenciaLampada" type="text" placeholder="Digite a potência da lâmpada (Em watts)" required>
+                <input id="LarguraComodo" type="text" placeholder="Digite o valor da largura (em metros)" required>
+                <input id="AlturaComodo" type="text" placeholder="Digite o valor do comprimento (em metros)" required>
+                <input onclick="LampadasPorMetro()" type="button" value="Enviar">
+            </form>
+            <p id="QuantLampadas">Quantidade De lampadas</p>
+            <div id="Lampadas-content">
+                
+            </div>
+        </section>
+
+        <section id="CaixasDeAzuleijo">
+            <div class="titulo">Quantas lâmpadas serão necessárias</div>
+            <form action="">
+                <input id="ComprimentoCozinha" type="text" placeholder="Digite o valor do comprimento (em metros)" required>
+                <input id="LarguraCozinha" type="text" placeholder="Digite o valor da largura (em metros)" required>
+                <input id="AlturaCozinha" type="text" placeholder="Digite o valor do comprimento (em metros)" required>
+                <input onclick="CaixasNaCozinha()" type="button" value="Enviar">
+            </form>
+            <p id="QuantCaixas">Caixas</p>
+            <div id="Box-Content" class="box-content">
+                
+            </div>
+        </section>
+        
+        <section id="CaixasDeAzuleijo">
+            <div class="titulo">Quantas lâmpadas serão necessárias</div>
+            <form action="">
+                <input id="ComprimentoCozinha" type="text" placeholder="Digite o valor do comprimento (em metros)" required>
+                <input id="LarguraCozinha" type="text" placeholder="Digite o valor da largura (em metros)" required>
+                <input id="AlturaCozinha" type="text" placeholder="Digite o valor do comprimento (em metros)" required>
+                <input onclick="CaixasNaCozinha()" type="button" value="Enviar">
+            </form>
+            <p id="QuantCaixas">Caixas</p>
+            <div id="Box-Content" class="box-content">
+                
+            </div>
+        </section>
+        
+
+        <script src="js/script.js"></script>
+        <!-- Escreva um programa para ler as dimensões 
+            de uma cozinha retangular (comprimento, 
+            largura e altura), calcular e escrever a 
+            quantidade de caixas de azulejos para se 
+            colocar em todas as suas paredes (considere
+            que não será descontada a área ocupada por
+            portas e janelas). Cada caixa de azulejos
+            possui 1,5 m2.  -->
+    </body>
+    
 </html>

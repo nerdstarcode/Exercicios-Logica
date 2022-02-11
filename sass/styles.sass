@@ -2,10 +2,9 @@
     margin: 0
     padding: 0
 body
-    display: flex
+    display: grid
+    grid-template-columns: auto auto auto auto auto
     background: #0b002e
-    width: 100%
-    height: 100%
 section
     background: #58478f88
     width: 16vw
@@ -20,7 +19,6 @@ section
     input
         width: 10vw
 #AreaCirculo
-    
     .circulo
         width: 4vw
         height: 4vw
@@ -28,9 +26,42 @@ section
         background: #000
         margin: 1vw auto
 #F-C
-    .termometro
+    .termometroF
         width:2vw
         height: 2vw
         margin: 1vw auto
         background: #000
-
+#C-F
+    .termometroC
+        width:2vw
+        height: 2vw
+        margin: 1vw auto
+        background: #000
+#Lampadas-Area
+    form
+        input
+            margin: 0.02vw
+    div#Lampadas-content
+        display: grid
+        grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto 
+        justify-content: space-around
+        width: 16vw
+        height: 5vw
+        .lampada
+            border-radius: 50%
+            width: 5px
+            height: 5px
+            background: #e9ff24
+#CaixasDeAzuleijo
+    .box-content
+        position: relative
+        display: grid
+        grid-template-columns: auto auto auto auto auto auto auto auto auto auto 
+        
+        .caixa
+            position: relative
+            width: 1.2vw
+            height: 1.2vw
+            margin: 0.2vw
+            background-image: url(../img/box.png)
+            background-size: 1.2vw
