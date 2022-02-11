@@ -11,7 +11,7 @@
         <section id="AreaCirculo">
             <div class="titulo">Area do circulo</div>
             <input id="RaioDoCirculo" type="text" placeholder="Digite o raio do círculo">
-            <button type="button" onclick="AreaCirculo()">Click</button>
+            <button onkeyup="AreaCirculo()" type="button" onclick="AreaCirculo()">Click</button>
             <p id="RespostaRaio">Raio</p>
             <div id="CirculoVisual" class="circulo"></div>
         </section>
@@ -36,7 +36,7 @@
                 <input id="PotenciaLampada" type="text" placeholder="Digite a potência da lâmpada (Em watts)" required>
                 <input id="LarguraComodo" type="text" placeholder="Digite o valor da largura (em metros)" required>
                 <input id="AlturaComodo" type="text" placeholder="Digite o valor do comprimento (em metros)" required>
-                <input onclick="LampadasPorMetro()" type="button" value="Enviar">
+                <input onkeydown="LampadasPorMetro()" onclick="LampadasPorMetro()" type="button" value="Enviar">
             </form>
             <p id="QuantLampadas">Quantidade De lampadas</p>
             <div id="Lampadas-content">
@@ -50,7 +50,7 @@
                 <input id="ComprimentoCozinha" type="text" placeholder="Digite o valor do comprimento (em metros)" required>
                 <input id="LarguraCozinha" type="text" placeholder="Digite o valor da largura (em metros)" required>
                 <input id="AlturaCozinha" type="text" placeholder="Digite o valor do comprimento (em metros)" required>
-                <input onclick="CaixasNaCozinha()" type="button" value="Enviar">
+                <input onkeyup="" onclick="CaixasNaCozinha()" type="button" value="Enviar">
             </form>
             <p id="QuantCaixas">Caixas</p>
             <div id="Box-Content" class="box-content">
@@ -65,7 +65,7 @@
                 <input id="KMfinal" type="text" placeholder="KM final" required>
                 <input id="Litros" type="text" placeholder="Litros gastos" required>
                 <input id="RecebidoS" type="text" placeholder="Valor recebido" required>
-                <input onclick="CaixasNaCozinha()" type="button" value="Enviar">
+                <input onkeyup="" onclick="LucroTaxista()" type="button" value="Enviar">
             </form>
             <p id="MediaKm">Km</p>
             <p id="LucroTax">Lucro</p>

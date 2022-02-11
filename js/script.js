@@ -53,7 +53,7 @@ function CaixasNaCozinha(){
     }
 }
 
-function CaixasNaCozinha(){
+function LucroTaxista(){
     let Kmi = parseFloat(document.getElementById("KMinicial").value);
     let Kmf = parseFloat(document.getElementById("KMfinal").value);
     let litros = parseFloat(document.getElementById("Litros").value);

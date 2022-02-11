@@ -23,7 +23,18 @@ section div.titulo {
   justify-content: center;
 }
 section input {
-  width: 10vw;
+  width: 13vw;
+  height: 20px;
+  margin: 2px;
+  border: none;
+  color: #fff;
+  background: #3a3158;
+}
+section input::placeholder {
+  color: #ccc;
+}
+section input[type=button]:hover {
+  background: #4e379c;
 }
 
 #AreaCirculo .circulo {
