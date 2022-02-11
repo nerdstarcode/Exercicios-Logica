@@ -1,14 +1,14 @@
-//s
 function AreaCirculo(){
     let raio = parseFloat(document.getElementById("RaioDoCirculo").value);
     let resposta = 3.14 * (raio * raio);
-    document.getElementById('RespostaRaio').innerHTML = 'Raio: '+ resposta +'cm';
+    document.getElementById('RespostaRaio').innerHTML = 'Raio: '+ resposta.toFixed(3) +'cm';
     document.getElementById('CirculoVisual').style = 'width: '+ resposta/(6*raio)+'px; height:'+ resposta/(6*raio) +'px;';
 }
+
 function FahrenheitToCelcius(){
     let F = parseFloat(document.getElementById("Fahrenheit").value);
     let resposta = (F - 32) * (5/9);
-    document.getElementById('TemperaturaF').innerHTML = 'Fahrenheit: '+ resposta;
+    document.getElementById('TemperaturaF').innerHTML = 'Fahrenheit: '+ resposta.toFixed(2);
     if (resposta > 0){
         document.getElementById('TermometroF').style = 'background: #000; height:'+ (resposta)/30 +'px;';
     }else{
@@ -16,10 +16,11 @@ function FahrenheitToCelcius(){
         document.getElementById('TermometroF').style = 'background: #ff0000; height:'+ (negativo)/(30) +'px;';
     }
 }
+
 function CelciusToFahrenheit(){
     let C = parseFloat(document.getElementById("Celcius").value);
     let resposta = (C*9/5) + 32;
-    document.getElementById('TemperaturaC').innerHTML = 'Celcius: '+ resposta;
+    document.getElementById('TemperaturaC').innerHTML = 'Celcius: '+ resposta.toFixed(2);
     if (resposta > 0){
         document.getElementById('TermometroC').style = 'background: #000; height:'+ (resposta)/30 +'px;';
     }else{
@@ -27,6 +28,7 @@ function CelciusToFahrenheit(){
         document.getElementById('TermometroC').style = 'background: #ff0000; height:'+ (negativo)/(30) +'px;';
     }
 }
+
 function LampadasPorMetro(){
     let watts = parseFloat(document.getElementById("PotenciaLampada").value);
     let x = parseFloat(document.getElementById("LarguraComodo").value);
@@ -38,6 +40,7 @@ function LampadasPorMetro(){
         document.getElementById('Lampadas-content').innerHTML += '<span class="lampada"></span>';
     }
 }
+
 function CaixasNaCozinha(){
     let x = parseFloat(document.getElementById("ComprimentoCozinha").value);
     let y = parseFloat(document.getElementById("LarguraCozinha").value);
@@ -48,4 +51,15 @@ function CaixasNaCozinha(){
     for (let i = 0; i < resposta; i++) {
         document.getElementById('Box-Content').innerHTML += '<div class="caixa"></div>';
     }
+}
+
+function CaixasNaCozinha(){
+    let Kmi = parseFloat(document.getElementById("KMinicial").value);
+    let Kmf = parseFloat(document.getElementById("KMfinal").value);
+    let litros = parseFloat(document.getElementById("Litros").value);
+    let Recebido = parseFloat(document.getElementById("RecebidoS").value);
+    let KmMedio = Kmf - Kmi;
+    let lucro = Recebido - litros*4.87;
+    document.getElementById('MediaKm').innerHTML = KmMedio +' Km rodados';
+    document.getElementById('LucroTax').innerHTML = lucro.toFixed(2)+ 'R$ de lucro';
 }
