@@ -71,8 +71,8 @@ section input[type=button]:hover {
 }
 #Lampadas-Area div#Lampadas-content .lampada {
   border-radius: 50%;
-  width: 5px;
-  height: 5px;
+  width: 0.45vw;
+  height: 0.45vw;
   background: #e9ff24;
 }
 
