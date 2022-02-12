@@ -2,7 +2,7 @@ function AreaCirculo(){
     let raio = parseFloat(document.getElementById("RaioDoCirculo").value);
     let resposta = 3.14 * (raio * raio);
     document.getElementById('RespostaRaio').innerHTML = 'Raio: '+ resposta.toFixed(3) +'cm';
-    document.getElementById('CirculoVisual').style = 'width: '+ resposta/(6*raio)+'px; height:'+ resposta/(6*raio) +'px;';
+    document.getElementById('CirculoVisual').style = 'width: '+ resposta/(3.14 *6*raio)+'px; height:'+ resposta/(3.14 *6*raio) +'px;';
 }
 
 function FahrenheitToCelcius(){
