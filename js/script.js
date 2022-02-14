@@ -81,15 +81,18 @@ function PossoVotar(){
     if (ano > 16){
         document.getElementById('PossoVotar').innerHTML = 'Pode';
     }else{
-        document.getElementById('PossoVotar').innerHTML = 'Ainda não, faltam ' + (16- ano) + ' anos';
+        let anosFaltando = (16 - ano)
+        document.getElementById('PossoVotar').innerHTML = 'Ainda não, faltam ' + anosFaltando + ' anos';
     }
 }
 
 function QuantoGastei(){
     let macas = parseFloat(document.getElementById("QuantMaca").value);
     if (macas < 12){
-        document.getElementById('QuantoGastei').innerHTML = (macas*0.3).toFixed(2) + 'R$';
+        let pago = (macas*0.3).toFixed(2)
+        document.getElementById('QuantoGastei').innerHTML = pago + 'R$';
     }else{
-        document.getElementById('QuantoGastei').innerHTML = (macas*0.25).toFixed(2) + 'R$';
+        let pago = (macas*0.3).toFixed(2)
+        document.getElementById('QuantoGastei').innerHTML = pago + 'R$';
     }
 }
