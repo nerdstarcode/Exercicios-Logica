@@ -70,6 +70,36 @@
             <p id="MediaKm">Km</p>
             <p id="LucroTax">Lucro</p>
         </section>
+
+        <section id="MaiorMenor">
+            <div class="titulo">Maior número entre dois</div>
+            <form>
+                <input id="Valor1" type="text" placeholder="Digite um número:" required>
+                <input id="Valor2" type="text" placeholder="Digite um número:" required>
+                <input onkeyup="" onclick="MaiorValor()" type="button" value="Enviar">
+            </form>
+            <p id="ValorMaior">Maior</p>
+        </section>
+
+        <section id="Votar">
+            <div class="titulo">Posso votar esse ano?</div>
+            <form>
+                <input id="AnoNascimento" type="text" placeholder="Digite o ano de nascimento:" required>
+                <input onkeyup="" onclick="PossoVotar()" type="button" value="Enviar">
+            </form>
+            <p id="PossoVotar">Posso votar?</p>
+        </section>
+
+        <section id="Macas">
+            <div class="titulo">Quanto gastei nas maçãs?</div>
+            <form>
+                <input id="QuantMaca" type="text" placeholder="Digite quantas maçãs comprou:" required>
+                <input onkeyup="" onclick="QuantoGastei()" type="button" value="Enviar">
+            </form>
+            <p id="QuantoGastei">Valor</p>
+        </section>
+
         <script src="js/script.js"></script>
+        
     </body>
 </html>

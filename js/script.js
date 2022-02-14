@@ -63,3 +63,33 @@ function LucroTaxista(){
     document.getElementById('MediaKm').innerHTML = KmMedio +' Km rodados';
     document.getElementById('LucroTax').innerHTML = lucro.toFixed(2)+ 'R$ de lucro';
 }
+
+function MaiorValor(){
+    let v1 = parseFloat(document.getElementById("Valor1").value);
+    let v2 = parseFloat(document.getElementById("Valor2").value);
+    if (v1 > v2){
+        document.getElementById('ValorMaior').innerHTML = v1 + 'é o maior valor';
+    }else{
+        document.getElementById('ValorMaior').innerHTML = v2 + ' é o maior valor';
+    }
+}
+
+function PossoVotar(){
+    let ano = parseFloat(document.getElementById("AnoNascimento").value);
+    let anoAtual = new Date().getFullYear()
+    ano = anoAtual - ano
+    if (ano > 16){
+        document.getElementById('PossoVotar').innerHTML = 'Pode';
+    }else{
+        document.getElementById('PossoVotar').innerHTML = 'Ainda não, faltam ' + (16- ano) + ' anos';
+    }
+}
+
+function QuantoGastei(){
+    let macas = parseFloat(document.getElementById("QuantMaca").value);
+    if (macas < 12){
+        document.getElementById('QuantoGastei').innerHTML = (macas*0.3).toFixed(2) + 'R$';
+    }else{
+        document.getElementById('QuantoGastei').innerHTML = (macas*0.25).toFixed(2) + 'R$';
+    }
+}
