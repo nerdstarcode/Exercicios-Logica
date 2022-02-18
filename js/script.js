@@ -96,3 +96,91 @@ function QuantoGastei(){
         document.getElementById('QuantoGastei').innerHTML = pago + 'R$';
     }
 }
+// funções fracamente ancoradas.
+
+/*
+15) Escreva um programa para ler o número de lados de um polígono regular e a medida do lado (em cm). Calcular e imprimir o seguinte:
+- Se o número de lados for igual a 3 escrever TRI NGULO e o valor do seu perímetro.
+- Se o número de lados for igual a 4 escrever QUADRADO e o valor da sua área.
+- Se o número de lados for igual a 5 escrever PENTÁGONO.
+Observação: Considere que o usuário só informará os valores 3, 4 ou 5.
+16) Acrescente as seguintes mensagens à solução do exercício anterior conforme o caso.
+- Caso o número de lados seja inferior a 3 escrever NÃO É UM POLÍGONO.
+- Caso o número de lados seja superior a 5 escrever POLÍGONO NÃO IDENTIFICADO.
+Observação: Considere que o usuário poderá informar qualquer valor para o número de lados.
+17) Escreva um programa para ler 2 valores inteiros e uma das seguintes operações a serem executadas 
+(codificada da seguinte forma: 1. Adição, 2.Subtração, 3.Divisão,  4.Multiplicação). Calcular e escrever o resultado dessa operação sobre os 
+dois valores lidos. Observação: Considere que só serão lidos os valores 1, 2, 3 ou 4.
+*/
+
+/*
+    14) Escreva um programa para ler o número de gols marcados pelo Grêmio e o número de gols marcados pelo Inter em um GRENAL. 
+    Escrever o nome do vencedor. Caso não haja vencedor deverá ser impressa a palavra EMPATE.
+*/
+    function ChamaOJogao(){
+        let golsT1 = parseInt(document.getElementById("JogaoGolsT1").value);
+        let golsT2 = parseInt(document.getElementById("JogaoGolsT2").value);
+        let resultado = Jogao(golsT1, golsT2);
+        document.getElementById('ResultadoJogao').innerHTML = resultado;
+    }
+    function Jogao(GolsT1 = 0, GolsT2 = 0, Time1 = "Grêmio", Time2 = "Inter"){
+        let resposta ={
+            time: '',
+            estado: 'Vitória'
+        };
+        let resultado = '';
+        if (GolsT1 == GolsT2){
+            resposta.estado = 'Empate';
+            resultado = `Nenhum dos times ganhou, ${resposta.estado}`;
+            return resultado;
+        } else if (GolsT1 > GolsT2){
+            resposta.time = Time1;
+            resultado = `O time ${Time1} ganhou com ${GolsT1} gols`;
+            return resultado;
+        } else{
+            resposta.time = Time2;
+            resultado = `O time ${Time2} ganhou com ${GolsT2} gols`;
+            return resultado;
+        }
+    }
+/*
+    15) Escreva um programa para ler o número de lados de um polígono regular e a medida do lado (em cm). Calcular e imprimir o seguinte:
+    - Se o número de lados for igual a 3 escrever TRI NGULO e o valor do seu perímetro.
+    - Se o número de lados for igual a 4 escrever QUADRADO e o valor da sua área.
+    - Se o número de lados for igual a 5 escrever PENTÁGONO.
+*/
+    function VeOsLadoAi(){
+        let lados = parseInt(document.getElementById("JogaoGolsT1").value);
+        let cm = parseFloat(document.querySelectorAll('input.centimetros'));
+        let resultado = LadosPoligon(lados, cm);
+        document.getElementById('ResultadoPoligono').innerHTML = resultado;
+    }
+    function LadosPoligon(lados = 3, cm = [0,0] ){
+        let resultado = '';
+        switch (lados) {
+            case 3:
+                let soma = 0;
+                for (let i = 0; i < 3; i++){
+                    soma = soma + cm[i]
+                }
+                resultado = `Um triângulo de perímetro ${soma}`;
+                return resultado
+              break;
+              case 4:
+                  let area = cm[0];
+                  for (let i = 1; i <5; i++){
+                    area = area*c[i];
+                  }
+                  resultado = `Um quadrado de área ${area}`;
+                  return resultado;
+              break;
+            case 5:
+                resultado = 'Um PENTAGONO'
+                return resultado;
+              break;
+            default:
+                  resultado = 'Digite um lado ai'
+                  return resultado;
+              break;
+          }
+    }
