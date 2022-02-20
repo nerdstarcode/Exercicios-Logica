@@ -165,22 +165,23 @@ dois valores lidos. Observação: Considere que só serão lidos os valores 1, 2
                 }
                 resultado = `Um triângulo de perímetro ${soma}`;
                 return resultado
-              break;
-              case 4:
+            break;
+            case 4:
                   let area = cm[0];
                   for (let i = 1; i <5; i++){
                     area = area*c[i];
                   }
                   resultado = `Um quadrado de área ${area}`;
                   return resultado;
-              break;
+            break;
             case 5:
                 resultado = 'Um PENTAGONO'
                 return resultado;
-              break;
+            break;
             default:
-                  resultado = 'Digite um lado ai'
-                  return resultado;
-              break;
+                resultado = 'Digite um lado ai'
+                return resultado;
+            break;
           }
     }
+    
