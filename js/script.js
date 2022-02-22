@@ -150,7 +150,7 @@ dois valores lidos. Observação: Considere que só serão lidos os valores 1, 2
     - Se o número de lados for igual a 5 escrever PENTÁGONO.
 */
     function VeOsLadoAi(){
-        let lados = parseInt(document.getElementById("JogaoGolsT1").value);
+        let lados = parseInt(document.getElementById("Lados").value);
         let cm = parseFloat(document.querySelectorAll('input.centimetros'));
         let resultado = LadosPoligon(lados, cm);
         document.getElementById('ResultadoPoligono').innerHTML = resultado;
@@ -184,4 +184,3 @@ dois valores lidos. Observação: Considere que só serão lidos os valores 1, 2
             break;
           }
     }
-    
